@@ -15,11 +15,11 @@
 <h2>Submitted easy Url Information</h2>
 <table>
     <tr>
-        <td>easyUrl</td>
-        <td>${easyURL}</td>
+        <td>easyUrl is http://easyUrl.me/  </td>
+        <td>${easyUrl}</td>
     </tr>
     <tr>
-        <td>originalUrl</td>
+        <td>originalUrl is </td>
         <td>${originalUrl}</td>
     </tr>
 </table>

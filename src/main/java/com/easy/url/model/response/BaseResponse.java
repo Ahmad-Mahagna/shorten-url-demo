@@ -33,7 +33,8 @@ public class BaseResponse {
 
     public enum ResponseState {
         OK(200),
-        ERROR(503);
+        ERROR(503),
+        INVALID_URL(403);
 
         int state;
 
@@ -44,5 +45,6 @@ public class BaseResponse {
         public int getState() {
             return state;
         }
+
     }
 }

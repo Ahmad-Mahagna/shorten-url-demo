@@ -9,6 +9,7 @@ import com.easy.url.model.request.MakeEasyUrlRequest;
 import com.easy.url.model.response.BaseResponse;
 import com.easy.url.model.response.FetchUrlResponse;
 import com.easy.url.model.response.MakeEasyUrlResponse;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -73,6 +74,35 @@ public class RequestShortenUrlController {
             return true;
         }
         return false;
+    }
+
+
+    @RequestMapping(value = "/make/json", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    MakeEasyUrlResponse makeEasyUrlJson(
+
+            @RequestBody(required = true) String url) {
+
+        //TODO validate  url   REGEX start with http / https ...
+        if (StringUtils.isBlank(url)) {
+            return new MakeEasyUrlResponse(BaseResponse.ResponseState.INVALID_URL.getState(), "invalid url [ " + url + "] ");
+        }
+        return generateEasyUrlAndSave(url);
+
+    }
+
+
+    @RequestMapping(value = "/fetch/json", method = RequestMethod.GET, produces = "application/json")
+    public
+    @ResponseBody
+    FetchUrlResponse fetchUrlJson(
+
+            @RequestParam(value = "easyUrl", required = true) String easyUrl) {
+
+        //TODO validate
+        return fetchUrl(easyUrl);
+
     }
 
 

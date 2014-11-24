@@ -19,7 +19,7 @@
         <td>${fullUrl}</td>
     </tr>
     <tr>
-        <td>easyURL</td>
+        <td>easyURL is http://easyUrl.me/  </td>
         <td>${easyURL}</td>
     </tr>
 </table>
