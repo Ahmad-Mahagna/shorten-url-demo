@@ -1,26 +1,26 @@
 <%--
   Created by IntelliJ IDEA.
   User: amahagna
-  Date: 11/23/14
-  Time: 5:55 PM
+  Date: 11/24/14
+  Time: 8:46 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
-    <title>Generate Easy Url</title>
+    <title>fetch original Url</title>
 </head>
 <body>
 
-<h2>Submitted Url Information</h2>
+<h2>Submitted easy Url Information</h2>
 <table>
     <tr>
-        <td>fullUrl</td>
-        <td>${fullUrl}</td>
+        <td>easyUrl</td>
+        <td>${easyURL}</td>
     </tr>
     <tr>
-        <td>easyURL</td>
-        <td>${easyURL}</td>
+        <td>originalUrl</td>
+        <td>${originalUrl}</td>
     </tr>
 </table>
 </body>
