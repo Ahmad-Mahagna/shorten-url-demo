@@ -16,12 +16,12 @@
 <form:form method="POST" action="/fetchUrl">
     <table>
         <tr>
-            <td><form:label path="easyUrl">Name</form:label></td>
+            <td><form:label path="easyUrl">Input easyUr :</form:label></td>
             <td><form:input path="easyUrl" /></td>
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit" value="Submit"/>
+                <input type="submit" value="Fetch url"/>
             </td>
         </tr>
     </table>

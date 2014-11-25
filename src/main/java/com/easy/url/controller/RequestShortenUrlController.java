@@ -14,10 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.AbstractController;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * Created by amahagna on 11/23/14.
@@ -26,6 +22,8 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class RequestShortenUrlController {
 
+
+    private static final String PREFIX_EASY_URL = "http://easyUrl.me/";
 
     @RequestMapping(value = "/make", method = RequestMethod.GET)
     public ModelAndView makeUrl() {
@@ -114,18 +112,22 @@ public class RequestShortenUrlController {
             DB.addUrl(url, easyUrl);
         } catch (DuplicateShortenUrl e) {
             //TODO add logs
-
             return new MakeEasyUrlResponse(MakeEasyUrlResponse.ResponseState.ERROR.getState(), "failed to add url , please try again");
         }
-
-        return new MakeEasyUrlResponse(easyUrl);
+        String easyUrlWithPrefix = PREFIX_EASY_URL + easyUrl;
+        return new MakeEasyUrlResponse(easyUrlWithPrefix);
 
     }
 
     private FetchUrlResponse fetchUrl(String easyUrl) {
-        String originUrl = DB.fetchUrl(easyUrl);
+
+        if (!StringUtils.startsWith(easyUrl, PREFIX_EASY_URL)) {
+            return new FetchUrlResponse(FetchUrlResponse.ResponseState.INVALID_URL.getState(), "easyUrl should start with  [" + PREFIX_EASY_URL + "]");
+        }
+        String easyUrlWithoutPrefix = StringUtils.removeStart(easyUrl, PREFIX_EASY_URL);
+        String originUrl = DB.fetchUrl(easyUrlWithoutPrefix);
         if (originUrl == null) {
-            return new FetchUrlResponse(FetchUrlResponse.ResponseState.ERROR.getState(), "no original url found match easy url [" + easyUrl + "]");
+            return new FetchUrlResponse(FetchUrlResponse.ResponseState.NOT_FOUND.getState(), "no original url found match easy url [" + easyUrl + "]");
         }
 
         return new FetchUrlResponse(originUrl);

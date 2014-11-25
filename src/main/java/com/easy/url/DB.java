@@ -15,7 +15,7 @@ public class DB {
 
 
 
-    public static void addUrl(String url,String shortenUrl) throws DuplicateShortenUrl {
+    public static synchronized void addUrl(String url,String shortenUrl) throws DuplicateShortenUrl {
 
         boolean isExist = DB.containsKey(shortenUrl);
         if (isExist) {

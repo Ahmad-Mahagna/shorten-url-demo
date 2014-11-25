@@ -15,13 +15,16 @@
 <h2>Submitted easy Url Information</h2>
 <table>
     <tr>
-        <td>easyUrl is http://easyUrl.me/  </td>
+        <td>your input: </td>
         <td>${easyUrl}</td>
     </tr>
     <tr>
-        <td>originalUrl is </td>
+        <td>original url:</td>
         <td>${originalUrl}</td>
     </tr>
 </table>
+<form action="../">
+    <input type="submit" value="Home">
+</form>
 </body>
 </html>

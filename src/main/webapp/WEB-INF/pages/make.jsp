@@ -16,15 +16,16 @@
 <form:form method="POST" action="/tinyUrlMaker">
     <table>
         <tr>
-            <td><form:label path="fullUrl">Name</form:label></td>
+            <td><form:label path="fullUrl">input your URL</form:label></td>
             <td><form:input path="fullUrl" /></td>
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit" value="Submit"/>
+                <input type="submit" value="generate"/>
             </td>
         </tr>
     </table>
+
 </form:form>
 </body>
 </html>
