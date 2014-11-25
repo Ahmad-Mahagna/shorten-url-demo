@@ -111,3 +111,25 @@ License
 ----
 
 GNU general public license
+
+
+####what I have to do to Handle 100000  (large scale)  requests per seconds?
+
+In order to handle this level of traffic The URL shortener service should be more mature and very efficiently. 
+
+* store the data in Nosql database e.g. Redis key/value based rather than IMDB (in memory DB ) 
+  this type of database used for quickly storing basic information, it is extermely performant  ,effcient easily scalalble. 
+
+* processing any request must be quickly (accessing DB , processing business logic ) by caching data , reuse object /services , minimized initialize object / services , business logic should be clear , effcient and very fast.
+
+* load balancing - allow us to add more instances of URL shortener service to handle more requests , application needs to designed to be scalable 
+
+* currently the algorithm based on generate ID then convert it to base 62. we need to improve generate ID process to be more effcient by using UUID and other libraries to make sure that is unique . this algorith required high CPU during   
+  processing the requests ,to reduce the amount of resources and processing time. option one is preparing generates easy urls pre-requests then all we need is to pick randomly  generated easy url and link it to in DB.
+  option two if we need to save more time while generate easy urls another efficient way to generate easy URL by running    dictionary algorithm for all convention of 5-8 letters and numbers.the solution is based on our service and resources 
+
+* application should be thread safe and each request need to be quickly 
+
+* security issue block any user request more than 3 times in min . etc
+
+* backup data (High avaiability mode ) and remove data after some period of time. ( 3 month)
