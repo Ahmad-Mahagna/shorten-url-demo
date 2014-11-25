@@ -1,10 +1,13 @@
 package com.easy.url.model.request;
 
 /**
- * Created by amahagna on 11/24/14.
+ * POJO file represent fetch original request
+ *
+ * @author Ahmad Mahagna
  */
 public class FetchUrlRequest {
 
+    // shorten url
     private String easyUrl;
 
     public String getEasyUrl() {

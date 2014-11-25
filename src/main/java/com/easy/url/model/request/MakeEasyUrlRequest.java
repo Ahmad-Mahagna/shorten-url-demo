@@ -2,16 +2,22 @@ package com.easy.url.model.request;
 
 
 
+/**
+ * POJO file represent make easy url request
+ *
+ * @author Ahmad Mahagna
+ */
 
 public class MakeEasyUrlRequest {
 
-    private String fullUrl;
+    // original url
+    private String originalUrl;
 
-    public String getFullUrl() {
-        return fullUrl;
+    public String getOriginalUrl() {
+        return originalUrl;
     }
 
-    public void setFullUrl(String fullUrl) {
-        this.fullUrl = fullUrl;
+    public void setOriginalUrl(String originalUrl) {
+        this.originalUrl = originalUrl;
     }
 }

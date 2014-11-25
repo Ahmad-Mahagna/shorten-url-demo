@@ -2,11 +2,13 @@ package com.easy.url.algorithm;
 
 import com.easy.url.DB;
 import com.easy.url.Exception.DuplicateShortenUrl;
-import junit.framework.Assert;
-//import org.junit.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
- * Created by amahagna on 11/24/14.
+ * Test Algorithm
+ *
+ * @author Ahmad Mahagna
  */
 
 
@@ -15,17 +17,16 @@ public class EasyUrlAlgorithmTest {
     private String BASIC_URL = "https://localhost:123/welcome";
 
     //TODO NEED MORE TESTS !
-    //@Test
+    @Test
     public void testAlgorithm() throws DuplicateShortenUrl {
 
         String easyUrl = EasyUrlAlgorithm.getEasyUrl(Util.getRandomLong());
         DB.addUrl(BASIC_URL, easyUrl);
         Assert.assertEquals(BASIC_URL, DB.fetchUrl(easyUrl));
 
-
     }
 
-   // @Test
+   @Test
     public void testSizeOfEasyUrl() {
 
         String easyUrl = EasyUrlAlgorithm.getEasyUrl(Util.getRandomLong());

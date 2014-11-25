@@ -16,7 +16,7 @@
 <table>
     <tr>
         <td>your input:</td>
-        <td>${fullUrl}</td>
+        <td>${originalUrl}</td>
     </tr>
     <tr>
         <td>easyURL:</td>

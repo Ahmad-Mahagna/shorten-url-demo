@@ -1,25 +1,28 @@
 package com.easy.url.model.response;
 
 /**
- * Created by amahagna on 11/24/14.
+ * Base response represent basic response e.g. request state and error message
+ *
+ * @author Ahmad Mahagna
  */
 public class BaseResponse {
 
-    private int httpState;
+
+    private int requestState;
     private String errorMessage;
 
-    public BaseResponse(int httpState,String errorMessage) {
-        this.httpState = httpState;
+    public BaseResponse(int requestState,String errorMessage) {
+        this.requestState = requestState;
         this.errorMessage = errorMessage;
     }
 
 
-    public int getHttpState() {
-        return httpState;
+    public int getRequestState() {
+        return requestState;
     }
 
-    public void setHttpState(int httpState) {
-        this.httpState = httpState;
+    public void setRequestState(int requestState) {
+        this.requestState = requestState;
     }
 
     public String getErrorMessage() {
@@ -31,6 +34,9 @@ public class BaseResponse {
     }
 
 
+    /**
+     * Response State represent response code of request
+     */
     public enum ResponseState {
         OK(200),
         ERROR(503),

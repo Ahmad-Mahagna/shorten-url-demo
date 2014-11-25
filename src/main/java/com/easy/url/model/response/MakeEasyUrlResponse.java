@@ -1,26 +1,25 @@
 package com.easy.url.model.response;
 
 /**
- * Created by amahagna on 11/24/14.
+ * POJO Make easy url response
+ *
+ * @author Ahmad Mahagna
  */
-public class MakeEasyUrlResponse extends BaseResponse{
+public class MakeEasyUrlResponse extends BaseResponse {
 
 
     private String easyUrl;
 
-
+    // success response constructor
     public MakeEasyUrlResponse(String easyUrl) {
-        super(ResponseState.OK.getState(),null);
+        super(ResponseState.OK.getState(), null);
         this.easyUrl = easyUrl;
     }
 
     public MakeEasyUrlResponse(int state, String errMsg) {
-        super(state,errMsg);
+        super(state, errMsg);
 
     }
-
-
-
 
 
     public String getEasyUrl() {

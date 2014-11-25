@@ -103,7 +103,8 @@ please contact us ,we need you :)
  - improve random generation
  - Add Code Comments
  - Validation on URL ...
- - improve requests ( remove null parameters ) 
+ - improve requests ( remove null parameters , adding http status)
+ - improve response ( contain also input from user and merge between all type  for make and fetch )
  - make request to generate urls json rather than plain/text to advanced parameters 
  - change UI ( challenge uses only one page ) 
 
@@ -118,7 +119,7 @@ GNU general public license
 In order to handle this level of traffic The URL shortener service should be more mature and very efficiently. 
 
 * store the data in Nosql database e.g. Redis key/value based rather than IMDB (in memory DB ) 
-  this type of database used for quickly storing basic information, it is extermely performant  ,effcient easily scalalble. 
+  this type of database used for quickly storing basic information, it is extremely performant ,efficient  easily scalable.
 
 * processing any request must be quickly (accessing DB , processing business logic ) by caching data , reuse object /services , minimized initialize object / services , business logic should be clear , effcient and very fast.
 

@@ -16,8 +16,8 @@
 <form:form method="POST" action="/tinyUrlMaker">
     <table>
         <tr>
-            <td><form:label path="fullUrl">input your URL</form:label></td>
-            <td><form:input path="fullUrl" /></td>
+            <td><form:label path="originalUrl">input your URL</form:label></td>
+            <td><form:input path="originalUrl" /></td>
         </tr>
         <tr>
             <td colspan="2">
