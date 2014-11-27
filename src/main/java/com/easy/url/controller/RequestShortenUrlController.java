@@ -187,7 +187,7 @@ public class RequestShortenUrlController {
      * @See MakeEasyUrlResponse
      */
     private MakeEasyUrlResponse generateEasyUrlAndSave(String url) {
-
+        //TODO validate that is not easy URL already 
         // generate ID
         long generateId = Util.getRandomLong();
         // generate easy url
