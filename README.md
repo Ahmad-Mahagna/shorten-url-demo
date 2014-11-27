@@ -96,17 +96,18 @@ Want to contribute? Great!
 please contact us ,we need you :) 
 
 
-### Todo's / next challange 
+### Todo's / Next challange 
 
  - Write Tests
- - change algorithm ( what about CRC32 ! )
- - improve random generation
+ - Change algorithm ( what about CRC32 ! )
+ - Improve random generation
  - Add Code Comments
  - Validation on URL ...
- - improve requests ( remove null parameters , adding http status)
- - improve response ( contain also input from user and merge between all type  for make and fetch )
- - make request to generate urls json rather than plain/text to advanced parameters 
- - change UI ( challenge uses only one page ) 
+ - Reuse easy urls for same long URL.
+ - Improve requests ( remove null parameters , adding http status)
+ - Improve response ( contain also input from user and merge between all type  for make and fetch )
+ - Make request to generate urls json rather than plain/text to advanced parameters 
+ - Change UI ( challenge uses only one page ) 
 
 License
 ----
