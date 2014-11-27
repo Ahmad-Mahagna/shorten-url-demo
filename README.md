@@ -99,7 +99,7 @@ please contact us ,we need you :)
 ### Todo's / next challange 
 
  - Write Tests
- - change algorithm
+ - change algorithm ( what about CRC32 ! )
  - improve random generation
  - Add Code Comments
  - Validation on URL ...
