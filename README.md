@@ -36,6 +36,7 @@ Thats all!
 
   Generate easy url let you submit a URL and get back shorten url 
   * A generate easy url request is an HTTP URL of the following form: 
+
  > POST   http://ip:port/make/json 
   
 ######request body param  (requires)    
