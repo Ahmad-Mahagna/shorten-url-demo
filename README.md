@@ -115,7 +115,7 @@ License
 GNU general public license
 
 
-####what I have to do to Handle 100000  (large scale)  requests per seconds?
+####what I have to do to handle 100000  (large scale)  requests per seconds?
 
 In order to handle this level of traffic The URL shortener service should be more mature and very efficiently. 
 
