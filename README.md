@@ -2,7 +2,7 @@
 
 Easy url service is a lightweight shorten Url service, based on HTTP REST service.
 
-#Features
+## Features
 
   - support standard REST API
   - Simple algorithm and code 
@@ -32,19 +32,19 @@ Thats all!
 
 #####REST API 
 
-######Generate easy url request.
+###### Generate easy url request.
 
   Generate easy url let you submit a URL and get back shorten url 
   * A generate easy url request is an HTTP URL of the following form: 
 
  > POST   http://ip:port/make/json 
   
-######request body param  (requires)    
+###### request body param  (requires)    
 * body text represent the url 
 > Content-Type: text/plain.
 
 * Note : currently request body is text/plain will be changed to be application/json (prototype currently)
-######output
+###### output
   output of generate easy url contains the following parameters.
 
 > {"easyUrl":"http://easyUrl.me/yWCgbDo",
@@ -58,16 +58,16 @@ Thats all!
 
    _____________
    
-######Fetch original url request.
+###### Fetch original url request.
 get original url by given easy url (shorten url) and get back corresponding original url.
 
 * A fetch original url request is an HTTP URL of the following form: (HTTP GET) 
 > GET http://ip:port/fetch/json?easyUrl=easyUrlvalue 
 
-######request param (requires) 
+###### request param (requires) 
 easyUrl : Http GET request represent easy url.
 
-######output
+###### output
   output of fetch original url contains the following parameters.
 
 > {"originUrl":"www.google.com/",
@@ -80,7 +80,7 @@ easyUrl : Http GET request represent easy url.
 
 --------
 
-#####UI 
+##### UI 
 
 In additional to Rest API we have adding user friendly GUI.
  * for generate easy URL 
